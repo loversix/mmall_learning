@@ -142,9 +142,8 @@ public class CartServiceImpl implements ICartService {
 
                 if(cartItem.getChecked() == Const.Cart.CHECKED){
                     //如果已经勾选,增加到整个的购物车总价中
-                    if (cartTotalPrice == null){
-                        cartTotalPrice = BigDecimalUtil.add(cartTotalPrice.doubleValue(),cartProductVo.getProductTotalPrice().doubleValue());
-                    }
+                    cartTotalPrice = BigDecimalUtil.add(cartTotalPrice.doubleValue(),cartProductVo.getProductTotalPrice().doubleValue());
+
                 }
                 cartProductVoList.add(cartProductVo);
             }
